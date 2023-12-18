@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<center>
+    <h3>Summary</h3>
+    <p>{{summary}}</p>
+        <div id="cont2">
+            <h3>Content Analysis</h3>
+            <table>
+                <tr>
+                    <td> Positive score: </td>
+                    <td> {{ pos }}</td>
+                </tr>
+                <tr>
+                    <td> Negative Score: </td>
+                    <td> {{ neg }}</td>
+                </tr>
+                <tr>
+                    <td> Polarity score: </td>
+                    <td> {{ pol }}</td>
+                </tr>
+                <tr>
+                    <td> Subjectivity score: </td>
+                    <td> {{ sub }}</td>
+                </tr>
+                <tr>
+                    <td> Average Sentence Length: </td>
+                    <td> {{ sent }}</td>
+                </tr>
+                <tr>
+                    <td> Percentage of Complex words: </td>
+                    <td> {{ comp }}</td>
+                </tr>
+                <tr>
+                    <td> Fog Index: </td>
+                    <td> {{ fog }}</td>
+                </tr>
+                <tr>
+                    <td> Complex word count: </td>
+                    <td> {{ comp_word }}</td>
+                </tr>
+                <tr>
+                    <td> Word Count: </td>
+                    <td> {{ word }}</td>
+                </tr>
+                <tr>
+                    <td> Syllable Count Per Word: </td>
+                    <td> {{ syl }}</td>
+                </tr>
+                <tr>
+                    <td> Personal Pronouns: </td>
+                    <td> {{ pro }}</td>
+                </tr>
+                <tr>
+                    <td> Average Word Length: </td>
+                    <td> {{ word_len }}</td>
+                </tr>
+            </table>
+        </div>
+</center>
+</body>
+</html>
