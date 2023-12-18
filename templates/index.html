@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    var x = 0;
+    function func(x) {
+    if(x == 1) {
+    document.getElementById("cont1").style.visibility="visible";
+    document.getElementById("cont2").style.visibility="hidden";
+    }
+    }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Editor's Tool</title>
+</head>
+<body>
+<div class="navbar" style="float:right;">
+    <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="documentation">Documentation</a></li>
+    </ul>
+</div>
+<center>
+    <div id="cont1" style="visibility: hidden;">
+        <br><br><br><br><br><br>
+            <h3>Processing...</h3>
+        </div>
+<form id="cont2" class="form" method="GET" action="/main">
+        <h3> Write your article in the text-box below </h3>
+    <textarea name = "content" placeholder="Write something.." style="height:50vh;width:50vw"></textarea>
+    <br><br>
+        <input class="button" type="submit" value='Analyze' name='Analyze' onclick="func(1)">
+    <br><br><br>
+</form>
+    </center>
+</body>
+</html>
