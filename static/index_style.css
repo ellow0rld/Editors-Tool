@@ -1,0 +1,56 @@
+body {
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.2;
+}
+
+ul {
+  list-style-type: none;
+  margin: 3vh;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  fonts-size: 32vh;
+  text-align: center;
+  padding: 0vh 1.8vw;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: red;
+}
+
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
+
+textarea{
+  box-sizing: border-box;
+  border: 0.2vw solid black;
+  border-radius: 0.5vw;
+  background-color: lightgrey;
+  resize: none;
+}
+
+.button{
+  background-color: grey;
+  border: 2px solid grey;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+p {
+  margin-left: 30vw;
+  margin-right: 30vw;
+}
