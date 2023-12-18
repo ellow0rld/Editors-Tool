@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentation</title>
+</head>
+<body>
+<h1><u>Documentation</u></h1>
+<h2> Summarization </h2>
+<p> Google's T5 is being used for text summarization. T5 is a large-scale transformer-based language model that has achieved
+    state-of-the-art results on various NLP tasks, including text summarization.</p>
+<p>T5 is an encoder-decoder model that is pre-trained on a mixture of unsupervised and supervised tasks in a multi-task setting. They converted
+    each task into a text-to-text format, enabling T5 to work well on a variety of tasks out of the box. The model achieves this by adding a
+    different prefix to the input corresponding to each task.</p>
+
+<h2> Analyzer </h2>
+<ul>
+    <li> <p><b> Positive Score: </b>This score is calculated by assigning the value of +1 for each word if found in the Positive Dictionary and then adding up all the values.
+</p></li>
+    <li>
+        <p> <b> Negative Score: </b> This score is calculated by assigning the value of -1 for each word if found in the Negative Dictionary and
+            then adding up all the values. We multiply the score with -1 so that the score is a positive number.</p>
+    </li>
+    <li>
+        <p> <b> Polarity Score: </b> This is the score that determines if a given text is positive or negative in nature. It is calculated by using the formula:
+Polarity Score = (Positive Score – Negative Score)/ ((Positive Score + Negative Score) + 0.000001)
+Range is from -1 to +1
+</p>
+    </li>
+    <li>
+        <p><b> Subjectivity Score: </b> This is the score that determines if a given text is objective or subjective. It is calculated by using the formula:
+Subjectivity Score = (Positive Score + Negative Score)/ ((Total Words after cleaning) + 0.000001)
+Range is from 0 to +1
+</p>
+    </li>
+    <li>
+        <p> <b> Average Sentence Length:</b> the number of words / the number of sentences</p>
+    </li>
+    <li>
+        <p> <b> Percentage of Complex words: </b> the number of complex words / the number of words</p>
+    </li>
+    <li>
+        <p> <b> Fog Index: </b> 0.4 * (Average Sentence Length + Percentage of Complex words)</p>
+    </li>
+    <li>
+        <p> <b> Complex word count: </b>  Complex words are words in the text that contain more than two syllables.
+</p>
+    </li>
+    <li>
+        <p> <b> Word Count: </b> We count the total cleaned words present in the text by,
+         <ol>
+<li> removing the stop words (using stopwords class of nltk package).</li>
+<li> removing any punctuations like ? ! , . from the word before counting.</li>
+        </ol>
+        </p>
+    </li>
+    <li>
+        <p><b> Syllable Count Per Word: </b> We count the number of Syllables in each word of the text by counting the vowels present in each word.
+            We also handle some exceptions like words ending with "es","ed" by not counting them as a syllable.
+</p>
+    </li>
+    <li>
+        <p><b> Personal Pronouns: </b>To calculate Personal Pronouns mentioned in the text, we use regex to find the counts of the words - “I,” “we,” “my,” “ours,” and “us”. Special care is taken so that the country name US is not included in the list.
+</p>
+    </li>
+    <li>
+        <p><b> Average Word Length: </b>Average Word Length is calculated by the formula:
+Sum of the total number of characters in each word/Total number of words
+</p>
+    </li>
+</ul>
+</body>
+</html>
